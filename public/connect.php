@@ -71,8 +71,6 @@ $uam_redirect_url = "http://$uamip:$uamport/logon?" .
   "username=" . urlencode($username) .
   "&response=" . urlencode($encoded_password);
 
-header('Location: ' . $uam_redirect_url);
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -83,7 +81,7 @@ header('Location: ' . $uam_redirect_url);
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/styles/bulma.min.css" />
     <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
-    <meta http-equiv="refresh" content="5;url=https://www.google.com" />
+    <meta http-equiv="refresh" content="2;url=<?php echo htmlspecialchars($uam_redirect_url); ?>" />
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="assets/styles/style.css" />
